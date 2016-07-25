@@ -12,6 +12,8 @@
     force=yes
     owner=vagrant
     group=vagrant 
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=360000
 - name: Install basic packages
   apt: name={{ item }} state=present
   with_items:
