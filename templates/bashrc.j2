@@ -99,3 +99,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PS1="[\u@\h \W]\$ "
+
+# Source files in .bashrc.d
+for f in .bashrc.d/*; do 
+  . ${f}
+done
+
