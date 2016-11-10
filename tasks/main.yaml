@@ -1,17 +1,13 @@
 - name: Copy .bashrc
   template: 
-    src=templates/bashrc.j2
+    src=bashrc.j2
     dest=/home/vagrant/.bashrc
     force=yes
-    owner=vagrant
-    group=vagrant 
 - name: Copy .vimrc
   template: 
-    src=templates/vimrc.j2
+    src=vimrc.j2
     dest=/home/vagrant/.vimrc
     force=yes
-    owner=vagrant
-    group=vagrant 
 - name: Update apt cache
   apt: update_cache=yes cache_valid_time=360000
 - name: Install basic packages
